@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     delete 'sign_out', :to => 'devise/sessions#destroy'
     authenticated :user do
-      root 'tests#index', as: :authenticated_root
+      root 'lifts#index', as: :authenticated_root
     end
 
     unauthenticated do
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tests, only: :index
+  resources :lifts
 end

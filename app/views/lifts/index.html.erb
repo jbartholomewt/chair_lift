@@ -1,0 +1,11 @@
+<div class="lift_list">
+  <h1 class="listTitle">List of Lifts</h1>
+</div>
+  <% @lifts.each do |lift| %>
+  <div class="add_link">
+    <%= link_to lift.name, lift_path(lift)  %>
+  </div>
+  <% end %>
+<div class="add_lift_center">
+   <%= link_to '- Add Lift -', new_lift_path %>
+</div>

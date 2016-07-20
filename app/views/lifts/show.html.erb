@@ -1,0 +1,20 @@
+<div class="body">
+  <h1><%= @lift.name %></h1>
+    <div class="callout secondary">
+      <%= @lift.description %>
+    </div>
+
+    <div class="callout">
+      <%= @lift.name %>
+      <%= @lift.description %>
+      <%= @lift.departure %>
+      <%= @lift.destination %>
+      <%= @lift.zip %>
+      <%= @lift.open_seats %>
+    </div>
+    <% if current_user.id == @lift.user_id %>
+      <%= link_to 'Edit', edit_lift_path(@lift) %>
+      <%= link_to 'Delete', @lift, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    </div>
+</div>
