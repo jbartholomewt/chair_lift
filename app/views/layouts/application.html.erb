@@ -1,35 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head>
-  <title>Chair Lift</title>
-  <%= stylesheet_link_tag    'main', media: 'all' %>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'main' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
-    <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <% if user_signed_in? %>
-    <nav class="top-bar" data-topbar role='navigation'>
-      <section class="raisetitle">
-        <%= link_to "Chair Lift", lifts_path %>
-      </section>
-      <section class="top_nav">
-  <div class="signout_element"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
-    <div class="nav_element"><%= link_to 'Home', lifts_path %>
-    </section>
-  </div>
-</nav>
+	<head>
+		<title>Chair Lift</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'main', media: 'all' %>
+  	<%= javascript_include_tag 'application' %>
 
-<% end %>
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: "alert alert-info" %>
-<% end %>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body id="top">
+		<!-- Header -->
+			<header id="header">
+				<h1><strong>chair lift.</strong></h1>
+			</header>
 
-<%= yield %>
+		<!-- Main -->
+			<div id="main">
+				<% if user_signed_in? %>
+				<div class="signout_element"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
+				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
+				<% end %>
 
-</body>
+					<% flash.each do |name, msg| %>
+					  <%= content_tag :div, msg, class: "alert alert-info" %>
+					<% end %>
+					<%= yield %>
+
+			</div>
+	</body>
 </html>

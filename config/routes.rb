@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   devise_scope :user do
     delete 'sign_out', :to => 'devise/sessions#destroy'
     authenticated :user do
+      resources :lifts
       root 'lifts#index', as: :authenticated_root
     end
+
 
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
-
-  resources :lifts
 end

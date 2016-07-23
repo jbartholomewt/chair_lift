@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :lifts
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   validates :name, presence: true
@@ -11,6 +12,7 @@ class User < ActiveRecord::Base
 
     def self.from_omniauth(auth)
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+       user.photo = auth.info.image
        user.email = auth.info.email
        user.password = Devise.friendly_token[0,20]
        user.name = auth.info.name   # assuming the user model has a name
@@ -22,6 +24,7 @@ class User < ActiveRecord::Base
       super.tap do |user|
         if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
           user.email = data["email"] if user.email.blank?
+          user.photo = auth.info.image
         end
       end
     end

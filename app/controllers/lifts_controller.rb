@@ -1,4 +1,5 @@
 class LiftsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @lifts = Lift.all
   end
