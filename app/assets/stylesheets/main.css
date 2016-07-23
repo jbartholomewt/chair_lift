@@ -1711,6 +1711,12 @@
 
 /* Section/Article */
 
+section#two{
+	margin-top: 0!important;
+	padding-top: 0!important;
+	border: 0!important;
+}
+
 	section.special, article.special {
 		text-align: center;
 	}
@@ -2350,8 +2356,8 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #F3805C;
+			color: #F3805C !important;
 		}
 
 		input[type="submit"]:active,
@@ -2480,17 +2486,16 @@
 	}
 
 		#header strong, #header b {
-			color: rgba(73, 191, 157, 0.8);
+
 			position: relative;
-			top: 20px;
-			right: 185px;
-			font-size: 23px;
-			padding: 0;
-			margin: 0;
+			top: 300px;
+			color: #F3805C;
+		  font: italic bold 80px Georgia, Serif;
+		  text-shadow: -4px 3px 0 #e0eff2, -14px 7px 0 #0a0e27;
 		}
 
 		.intro{
-			color: rgba(73, 191, 157, 0.3);
+			color: black;
 			position: relative;
 			right: 180px;
 			bottom: 187px;
@@ -2498,7 +2503,7 @@
 		}
 
 		.intro2{
-			color: rgba(73, 191, 157, 0.3);
+			color: black;
 			position: relative;
 			right: 170px;
 			bottom: 190px;
@@ -2519,12 +2524,26 @@
 			right: 30px;
 		}
 
-		#header .image.avatar {
-			margin: 0 0 1em 0;
-			width: 6.25em;
+.facebook{
+	position: relative;
+	left: 210px;
+	bottom: 81px;
+
+}
+		.signout_element{
 			position: relative;
-			bottom: 70px;
-			right: 50px;
+			left: 550px;
+			bottom: 50px;
+		}
+
+		.image.avatar {
+			object-fit: cover;
+			position: relative;
+			bottom: 160px;
+			left: 720px;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
 		}
 
 /* Footer */

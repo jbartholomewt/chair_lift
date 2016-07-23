@@ -15,17 +15,15 @@
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
-				<a href="#" class="image avatar"><%= image_tag('avatar.jpg') %></a>
-				<h1><strong>Chair Lift</strong></h1><span class="intro">the easiest way to </span>
-				<span class="intro2"><br> get to the mountain</span>
-				<% if user_signed_in? %>
-				<div class="signout_element"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
-				<% end %>
+				<h1><strong>chair lift.</strong></h1>
 			</header>
 
 		<!-- Main -->
 			<div id="main">
-				<h2>Chair Lift.</h2>
+				<% if user_signed_in? %>
+				<div class="signout_element"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
+				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
+				<% end %>
 
 					<% flash.each do |name, msg| %>
 					  <%= content_tag :div, msg, class: "alert alert-info" %>

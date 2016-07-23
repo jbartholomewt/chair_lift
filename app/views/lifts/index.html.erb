@@ -11,11 +11,11 @@
       </article>
 
     <!-- </div>
-    <ul class="actions">
+    <ul class="actions">8
       <li><a href="#" class="all_lifts_button"><%= button_to 'View All Lifts', lifts_path%></a></li>
     </ul> -->
     <ul class="actions">
-      <li><a href="#" ><%= button_to 'Add Lift', new_lift_path %></a></li>
+      <a href="#" ><%= button_to 'Add Lift', new_lift_path, method: 'get' %></a>
     </ul>
     <% end %>
   </section>

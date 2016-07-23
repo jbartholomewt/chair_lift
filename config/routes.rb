@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       root 'lifts#index', as: :authenticated_root
     end
 
+
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
