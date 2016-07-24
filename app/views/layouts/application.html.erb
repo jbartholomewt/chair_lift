@@ -22,7 +22,9 @@
 			<div id="main">
 				<% if user_signed_in? %>
 				<div class="signout_element"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
+				<% if current_user.photo != nil %>
 				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
+				<% end %>
 				<% end %>
 
 					<% flash.each do |name, msg| %>

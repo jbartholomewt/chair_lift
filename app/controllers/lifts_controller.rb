@@ -48,6 +48,6 @@ class LiftsController < ApplicationController
   private
 
   def params_lift
-    params.require(:lift).permit(:name, :departure, :destination, :zip, :description, :open_seats)
+    params.require(:lift).permit(:name, :departure, :destination, :zip, :description, :open_seats, :departure_date)
   end
 end

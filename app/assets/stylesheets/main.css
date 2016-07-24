@@ -1798,7 +1798,7 @@ section#two{
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: #F3805C;
 		}
 
 	.select-wrapper {
