@@ -48,6 +48,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.11.1)
+      capybara (>= 2.3.0, < 2.8.0)
+      json
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -338,10 +341,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    shoulda (3.5.0)
-      shoulda-context (~> 1.0, >= 1.0.1)
-      shoulda-matchers (>= 1.4.1, < 3.0)
-    shoulda-context (1.2.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     simplecov (0.12.0)
@@ -380,6 +379,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  capybara-webkit
   carrierwave
   coveralls
   database_cleaner
@@ -400,7 +400,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
-  shoulda
+  shoulda-matchers
   uglifier (>= 1.3.0)
   valid_attribute
 

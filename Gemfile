@@ -19,9 +19,11 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
-  gem 'shoulda'
-  gem 'database_cleaner'
+  gem 'shoulda-matchers'
   gem 'valid_attribute'
+  gem 'dotenv-rails'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
 end
 
 group :test do
