@@ -42,7 +42,7 @@ class LiftsController < ApplicationController
   def destroy
     @lift = Lift.find(params[:id])
     @lift.destroy
-    redirect_to lift_path
+    redirect_to lifts_path
   end
 
   private

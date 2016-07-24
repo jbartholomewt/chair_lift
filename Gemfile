@@ -20,6 +20,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'shoulda'
+  gem 'database_cleaner'
   gem 'valid_attribute'
 end
 

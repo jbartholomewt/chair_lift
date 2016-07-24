@@ -6,8 +6,8 @@ module AuthenticationHelper
           provider: 'facebook',
           uid: '123545',
           info: {
-            first_name: "Gaius",
-            last_name:  "Baltar",
+            first_name: "John",
+            last_name:  "Smith",
             email:      "test@example.com"
           },
           credentials: {
