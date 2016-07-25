@@ -2,10 +2,10 @@
 <!-- Two -->
   <section id="two">
 
-      <a href="#" ><%= button_to 'Add Lift', new_lift_path, method: 'get' %></a>
+      <a><%= button_to 'Add Lift', new_lift_path, method: 'get' %></a>
     <h2>Recent Lifts</h2>
-  <% @lifts.each do |lift| %>
     <div class="row">
+  <% @lifts.each do |lift| %>
       <article class="6u 12u$(xsmall) work-item">
         <a href="fulls/01.jpg" class="image fit thumb"> <%= image_tag('thumbs/01.jpg') %></a>
         <%= link_to lift.name, lift_path(lift)  %>

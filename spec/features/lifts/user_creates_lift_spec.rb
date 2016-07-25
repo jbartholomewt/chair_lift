@@ -13,13 +13,13 @@ end
 
   scenario 'user fills out lift creation form successfully' do
     click_button 'Add Lift'
-    fill_in 'Name', with: 'Waterville Valley day trip'
-    fill_in 'Departure', with: 'Boston'
-    fill_in 'Destination', with: 'Waterville'
-    fill_in 'Description', with: 'Day trip to Waterville'
-    fill_in 'Zip', with: '02120'
-    fill_in 'Departure date', with: '1988/10/10'
-    fill_in 'Open seats', with: "2"
+    fill_in 'lift[name]', :with => 'Waterville Valley day trip'
+    fill_in 'lift[open_seats]', :with => '2'
+    fill_in 'lift[departure]', :with => 'Boston'
+    fill_in 'lift[destination]', :with => 'Waterville'
+    fill_in 'lift[description]', :with => 'day trip'
+    fill_in 'lift[zip]', :with => '02120'
+    fill_in 'datefield', :with => '1988/10/10'
     click_button 'Create Lift'
 
     expect(page).to have_content('Waterville Valley day trip')
@@ -29,13 +29,13 @@ end
 
   scenario 'user fills out Lift creation form unsuccessfully' do
     click_button 'Add Lift'
-    fill_in 'Name', with: ''
-    fill_in 'Departure', with: ''
-    fill_in 'Destination', with: ''
-    fill_in 'Description', with: ''
-    fill_in 'Zip', with: ''
-    fill_in 'Departure date', with: ''
-    fill_in 'Open seats', with: ""
+    fill_in 'lift[name]', :with => ''
+    fill_in 'lift[open_seats]', :with => ''
+    fill_in 'lift[departure]', :with => ''
+    fill_in 'lift[destination]', :with => ''
+    fill_in 'lift[description]', :with => ''
+    fill_in 'lift[zip]', :with => ''
+    fill_in 'datefield', :with => ''
     click_button 'Create Lift'
 
 

@@ -11,13 +11,13 @@ end
 
   scenario 'user visits lift show page and deletes lift' do
     click_button 'Add Lift'
-    fill_in 'Name', with: 'Waterville Valley day trip'
-    fill_in 'Departure', with: 'Boston'
-    fill_in 'Destination', with: 'Waterville'
-    fill_in 'Description', with: 'Day trip to Waterville'
-    fill_in 'Zip', with: '02120'
-    fill_in 'Departure date', with: '1988/10/10'
-    fill_in 'Open seats', with: "2"
+    fill_in 'lift[name]', :with => 'Waterville Valley day trip'
+    fill_in 'lift[open_seats]', :with => '2'
+    fill_in 'lift[departure]', :with => 'Boston'
+    fill_in 'lift[destination]', :with => 'Waterville'
+    fill_in 'lift[description]', :with => 'day trip'
+    fill_in 'lift[zip]', :with => '02120'
+    fill_in 'datefield', :with => '1988/10/10'
     click_button 'Create Lift'
     click_on "Waterville Valley day trip"
     click_button 'Delete'

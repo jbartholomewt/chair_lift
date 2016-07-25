@@ -2488,11 +2488,13 @@ section#two{
 		#header strong, #header b {
 
 			position: relative;
-			top: 300px;
+			bottom: 100px;
+			right: 50px;
 			color: #F3805C;
 		  font: italic bold 80px Georgia, Serif;
 		  text-shadow: -4px 3px 0 #e0eff2, -14px 7px 0 #0a0e27;
 		}
+
 
 		.intro{
 			color: black;
@@ -2528,19 +2530,24 @@ section#two{
 	position: relative;
 	left: 210px;
 	bottom: 81px;
-
 }
-		.signout_element{
+
+
+		#signout{
 			position: relative;
-			left: 550px;
-			bottom: 50px;
+			bottom: 20px;
+			padding: 1px;
+			background-color: white;
 		}
 
 		.image.avatar {
 			object-fit: cover;
 			position: relative;
-			bottom: 160px;
-			left: 720px;
+			bottom: 130px;
+			right: 170px;
+			border-style: double;
+			border-color: white;
+			border-width: thick;
 			border-radius: 50%;
 			width: 100px;
 			height: 100px;
