@@ -36,18 +36,18 @@ class LiftsController < ApplicationController
   end
 
   def edit
-    @lift = lift.find(params[:id])
+    @lift = Lift.find(params[:id])
   end
 
   def destroy
     @lift = Lift.find(params[:id])
     @lift.destroy
-    redirect_to lift_path
+    redirect_to lifts_path
   end
 
   private
 
   def params_lift
-    params.require(:lift).permit(:name, :departure, :destination, :zip, :description, :open_seats)
+    params.require(:lift).permit(:name, :departure, :destination, :zip, :description, :open_seats, :departure_date)
   end
 end

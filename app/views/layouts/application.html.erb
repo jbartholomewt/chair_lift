@@ -15,20 +15,28 @@
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
-				<h1><strong>chair lift.</strong></h1>
+				<strong>chair lift.</strong>
 			</header>
-
 		<!-- Main -->
-			<div id="main">
+		<section id="one">
+		  <div class="major">
 				<% if user_signed_in? %>
-				<div class="signout_element"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete %></div>
+				<div class="signout">
+			  <a><%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %></a>
+				</div>
+				<% if current_user.photo != nil %>
 				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
 				<% end %>
-
-					<% flash.each do |name, msg| %>
+				<% end %>
+			</div>
+		</section>
+				<div id="main">
+				<%= yield %>
+					<div><% flash.each do |name, msg| %>
 					  <%= content_tag :div, msg, class: "alert alert-info" %>
 					<% end %>
-					<%= yield %>
+				</div>
+
 
 			</div>
 	</body>

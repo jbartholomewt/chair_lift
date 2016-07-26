@@ -1,21 +1,26 @@
 
 <!-- Two -->
   <section id="two">
-  <% @lifts.each do |lift| %>
+      <%= button_to 'Add Lift', new_lift_path, method: 'get' %>
     <h2>Recent Lifts</h2>
     <div class="row">
+  <% @lifts.each do |lift| %>
       <article class="6u 12u$(xsmall) work-item">
         <a href="fulls/01.jpg" class="image fit thumb"> <%= image_tag('thumbs/01.jpg') %></a>
-        <h3><%= link_to lift.name, lift_path(lift)  %></h3>
-        <p>lift.description.</p>
-      </article>
+        <p><%= link_to lift.name, lift_path(lift) %> by: <%= lift.user.name %></p>
+        <p><%=lift.description%></p>
 
-    <!-- </div>
-    <ul class="actions">8
-      <li><a href="#" class="all_lifts_button"><%= button_to 'View All Lifts', lifts_path%></a></li>
-    </ul> -->
-    <ul class="actions">
-      <a href="#" ><%= button_to 'Add Lift', new_lift_path, method: 'get' %></a>
-    </ul>
-    <% end %>
+      </article>
+<% end %>
   </section>
+
+
+
+
+
+
+
+  <!-- </div>
+  <ul class="actions">8
+  <li><a href="#" class="all_lifts_button"><%= button_to 'View All Lifts', lifts_path%></a></li>
+</ul> -->

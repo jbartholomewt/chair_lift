@@ -6,5 +6,6 @@ class Lift < ActiveRecord::Base
   validates :destination, presence: true
   validates :description, presence: true
   validates :open_seats, presence: true
+  validates :departure_date, presence: true
   validates :zip, presence: true, numericality: true, length: { is: 5 }
 end

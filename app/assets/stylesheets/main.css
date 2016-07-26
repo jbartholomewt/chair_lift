@@ -1798,7 +1798,7 @@ section#two{
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: #F3805C;
 		}
 
 	.select-wrapper {
@@ -2486,13 +2486,18 @@ section#two{
 	}
 
 		#header strong, #header b {
-
-			position: relative;
-			top: 300px;
-			color: #F3805C;
-		  font: italic bold 80px Georgia, Serif;
-		  text-shadow: -4px 3px 0 #e0eff2, -14px 7px 0 #0a0e27;
+		position: relative;
+		display: block;
+		top: 20%;
+		left: 30%;
+   	width: 100px;
+   	height: 100px;
+    margin-left: -50px;
+		color: #F3805C;
+		font: italic bold 80px Georgia, Serif;
+		text-shadow: -4px 3px 0 #e0eff2, -14px 7px 0 #0a0e27;
 		}
+
 
 		.intro{
 			color: black;
@@ -2524,23 +2529,34 @@ section#two{
 			right: 30px;
 		}
 
-.facebook{
-	position: relative;
-	left: 210px;
-	bottom: 81px;
-
-}
-		.signout_element{
+		.facebook{
 			position: relative;
-			left: 550px;
-			bottom: 50px;
+			left: 210px;
+			bottom: 81px;
+		}
+
+		form.button_to{
+			margin: 0px;
+			width: 150px;
+		}
+
+		#signout{
+			position: absolute;
+			margin: 10px;
+			position: absolute;
+    	top: 20px;
+    	left: 50%;
+			background-color: white;
 		}
 
 		.image.avatar {
+			position: absolute;
+    	top: 0px;
+    	left: 0px;
 			object-fit: cover;
-			position: relative;
-			bottom: 160px;
-			left: 720px;
+			border-style: double;
+			border-color: white;
+			border-width: thick;
 			border-radius: 50%;
 			width: 100px;
 			height: 100px;
