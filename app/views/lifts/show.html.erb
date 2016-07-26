@@ -13,7 +13,7 @@
       <%= @lift.open_seats %>
     </div>
     <% if current_user.id == @lift.user_id %>
-      <%= button_to 'Edit', edit_lift_path(@lift) %>
+      <%= button_to 'Edit', edit_lift_path(@lift), :method => :get %>
       <%= button_to 'Delete', lift_path(@lift), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
     </div>

@@ -15,23 +15,28 @@
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
+				<strong>chair lift.</strong>
+			</header>
+		<!-- Main -->
+		<section id="one">
+		  <div class="major">
 				<% if user_signed_in? %>
-				<%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %>
+				<div class="signout">
+			  <a><%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %></a>
+				</div>
 				<% if current_user.photo != nil %>
 				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
 				<% end %>
 				<% end %>
-
-				<div class='chairlift'><strong>chair lift.</strong></div>
-			</header>
-		<!-- Main -->
-			<div id="main">
-
-					<div class="12u"><% flash.each do |name, msg| %>
+			</div>
+		</section>
+				<div id="main">
+				<%= yield %>
+					<div><% flash.each do |name, msg| %>
 					  <%= content_tag :div, msg, class: "alert alert-info" %>
 					<% end %>
 				</div>
-					<%= yield %>
+
 
 			</div>
 	</body>

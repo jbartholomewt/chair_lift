@@ -1,15 +1,15 @@
 
 <!-- Two -->
   <section id="two">
-
-      <a><%= button_to 'Add Lift', new_lift_path, method: 'get' %></a>
+      <%= button_to 'Add Lift', new_lift_path, method: 'get' %>
     <h2>Recent Lifts</h2>
     <div class="row">
   <% @lifts.each do |lift| %>
       <article class="6u 12u$(xsmall) work-item">
         <a href="fulls/01.jpg" class="image fit thumb"> <%= image_tag('thumbs/01.jpg') %></a>
-        <%= link_to lift.name, lift_path(lift)  %>
+        <p><%= link_to lift.name, lift_path(lift) %> by: <%= lift.user.name %></p>
         <p><%=lift.description%></p>
+
       </article>
 <% end %>
   </section>

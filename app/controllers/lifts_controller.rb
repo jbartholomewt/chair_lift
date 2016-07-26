@@ -36,7 +36,7 @@ class LiftsController < ApplicationController
   end
 
   def edit
-    @lift = lift.find(params[:id])
+    @lift = Lift.find(params[:id])
   end
 
   def destroy
