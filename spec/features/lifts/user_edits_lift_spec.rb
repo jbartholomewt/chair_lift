@@ -51,4 +51,4 @@ scenario 'user visits lift show page and deletes lift' do
 #
 #     expect(page).to_not have_content('Edit')
 #   end
-# end
+end

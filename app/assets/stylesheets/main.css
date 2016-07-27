@@ -2015,7 +2015,7 @@ section#two{
 		.image.thumb {
 			text-align: center;
 		}
-		
+
 
 			.image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
@@ -2555,14 +2555,13 @@ section#two{
 	right: 130px;
 	margin-left: 20px;
 	float: right;
-	outline:none;
+	outline: none;
 }
 
 #two h2{
 	text-align: center;
 }
 
-}
 .homebutton{
 	width: 0;
 }
@@ -2571,9 +2570,6 @@ section#two{
 	vertical-align: top;
 	background: white;
 	margin: 7px;
-}
-
-.nav-bar-list ul li{
 }
 
 		#signout{
