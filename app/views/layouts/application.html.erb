@@ -17,17 +17,24 @@
 			<header id="header">
 				<strong>chair lift.</strong>
 			</header>
+
+			<!--Top Nav--><% if user_signed_in? %>
+			<nav class="fixed-nav-bar">
+				<ul>
+				<a class="homebutton"><%= button_to 'Home', lifts_path, id: 'homebutton', :method => :get %></a>
+				<a class="addbutton"><%= button_to 'Add Lift', new_lift_path, id: 'addbutton', :method => :get %></a>
+				<a class="signout"><%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %></a>
+				<% if current_user.photo != nil %>
+				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
+			</ul>
+		</nav>
+				<% end %>
+				<% end %>
+
 		<!-- Main -->
 		<section id="one">
 		  <div class="major">
-				<% if user_signed_in? %>
-				<div class="signout">
-			  <a><%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %></a>
-				</div>
-				<% if current_user.photo != nil %>
-				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
-				<% end %>
-				<% end %>
+
 			</div>
 		</section>
 				<div id="main">
