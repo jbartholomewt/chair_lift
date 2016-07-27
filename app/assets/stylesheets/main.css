@@ -2532,7 +2532,7 @@ section#two{
 		.facebook{
 			position: relative;
 			left: 210px;
-			bottom: 81px;
+			bottom: 50px;
 		}
 
 		form.button_to{
@@ -2540,19 +2540,57 @@ section#two{
 			width: 150px;
 		}
 
+		.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 70%;
+  height: 70px;
+  background-color: white;
+}
+.fixed-nav-bar a{
+	position: relative;
+	right: 130px;
+	margin-left: 20px;
+	float: right;
+	outline:none;
+}
+
+#two h2{
+	text-align: center;
+}
+
+}
+.homebutton{
+	width: 0;
+}
+
+#homebutton{
+	vertical-align: top;
+	background: white;
+	margin: 7px;
+}
+
+.nav-bar-list ul li{
+}
+
 		#signout{
-			position: absolute;
-			margin: 10px;
-			position: absolute;
-    	top: 20px;
-    	left: 50%;
+			margin: 7px;
+			vertical-align: top;
+			float: left;
+			background-color: white;
+		}
+
+		#addbutton{
+			margin: 7px;
 			background-color: white;
 		}
 
 		.image.avatar {
 			position: absolute;
     	top: 0px;
-    	left: 0px;
+    	right: 0px;
 			object-fit: cover;
 			border-style: double;
 			border-color: white;
@@ -3130,7 +3168,7 @@ section#two{
 					display: block;
 					padding: 1em 0 0 0;
 					text-align: center;
-					width: 100%;
+
 				}
 
 					ul.actions li:first-child {
