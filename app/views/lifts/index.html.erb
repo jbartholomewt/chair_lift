@@ -1,17 +1,19 @@
 
 <!-- Two -->
   <section id="two">
-    <h2>Recent Lifts</h2>
+    <strong>Recent Lifts</strong>
     <div class="row">
   <% @lifts.each do |lift| %>
       <article class="6u 12u$(xsmall) work-item">
-        <iframe
+        <a><iframe
           frameborder="0" style="border:0"
+          width="380"
+          height="224"
           src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
             &q=<%= lift.zip %>">
-        </iframe>
+        </iframe></a>
         <p><%= link_to lift.name, lift_path(lift) %> by: <%= lift.user.name %></p>
-        <p>Leaving<%= lift.departure %></p> <%= lift.departure_date.strftime("on %m/%d/%Y") %>
+        <p>Leaving: <%= lift.departure %></p> <%= lift.departure_date.strftime("on %m/%d/%Y") %>
 
       </article>
 <% end %>

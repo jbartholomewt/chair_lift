@@ -1578,8 +1578,7 @@
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #F3805C;
 		text-decoration: none;
 	}
 
@@ -2547,8 +2546,9 @@ section#two{
   right: 0;
   z-index: 9999;
   width: 70%;
-  height: 70px;
-  background-color: white;
+  height: 65px;
+	border-bottom: 2px solid #E1E0E5;
+  background-color: rgba(255,255,255,1);
 }
 .fixed-nav-bar a{
 	position: relative;
@@ -2587,7 +2587,7 @@ section#two{
 		.image.avatar {
 			position: absolute;
     	top: 0px;
-    	right: 0px;
+    	right: 10px;
 			object-fit: cover;
 			border-style: double;
 			border-color: white;
