@@ -11,7 +11,7 @@
             &q=<%= lift.zip %>">
         </iframe>
         <p><%= link_to lift.name, lift_path(lift) %> by: <%= lift.user.name %></p>
-        <p>Leaving<%= lift.departure %></p> on <%= lift.departure_date %>
+        <p>Leaving<%= lift.departure %></p> <%= lift.departure_date.strftime("on %m/%d/%Y") %>
 
       </article>
 <% end %>

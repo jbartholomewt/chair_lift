@@ -2552,7 +2552,7 @@ section#two{
 }
 .fixed-nav-bar a{
 	position: relative;
-	right: 130px;
+	right: 300px;
 	margin-left: 20px;
 	float: right;
 	outline: none;
