@@ -2015,6 +2015,7 @@ section#two{
 		.image.thumb {
 			text-align: center;
 		}
+		
 
 			.image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
