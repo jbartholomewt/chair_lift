@@ -1,7 +1,7 @@
 class LiftsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @lifts = Lift.all
+    @lifts = Lift.search(params[:query])
   end
 
   def create
@@ -33,6 +33,7 @@ class LiftsController < ApplicationController
 
   def show
     @lift = Lift.find(params[:id])
+    @user = @lift.user
   end
 
   def edit

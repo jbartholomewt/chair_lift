@@ -19,14 +19,18 @@
 			</header>
 
 			<!--Top Nav--><% if user_signed_in? %>
-			<nav class="fixed-nav-bar">
-				<ul>
-				<a class="homebutton"><%= button_to 'Home', lifts_path, id: 'homebutton', :method => :get %></a>
-				<a class="addbutton"><%= button_to 'Add Lift', new_lift_path, id: 'addbutton', :method => :get %></a>
-				<a class="signout"><%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %></a>
+			<nav class=" row fixed-nav-bar">
+				<div id="annoying">
+					<%= form_tag lifts_path, method: :get do %>
+				      <%= text_field_tag :query %>
+				      <%= submit_tag "Search", { class: "button button-search" } %>
+				  <% end %>
+				<%= button_to 'Home', lifts_path, id: 'homebutton', :method => :get %>
+				<%= button_to 'Add Lift', new_lift_path, id: 'addbutton', :method => :get %>
+				<%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %>
 				<% if current_user.photo != nil %>
 				<%= image_tag current_user.photo + "?type=large", class:"image avatar" %>
-			</ul>
+			</div>
 		</nav>
 				<% end %>
 				<% end %>

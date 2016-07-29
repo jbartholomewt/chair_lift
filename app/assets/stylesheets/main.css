@@ -2529,15 +2529,34 @@ section#two{
 			right: 30px;
 		}
 
+		.fixed-nav-bar input[type=submit] {
+    width: 2em;  height: 3em;
+		font-size: 15px;
+}
+
 		.facebook{
 			position: relative;
-			left: 210px;
-			bottom: 50px;
+			left: 10px;
+			top: 10px;
+		}
+
+		#query{
+			width: 100px;
+			display: inline;
+		}
+
+		#annoying{
+			margin: 0px;
+		}
+
+		#annoying form{
+			display: inline;
 		}
 
 		form.button_to{
 			margin: 0px;
-			width: 150px;
+			width: 100px;
+			display: inline;
 		}
 
 		.fixed-nav-bar {
@@ -2550,12 +2569,31 @@ section#two{
 	border-bottom: 2px solid #E1E0E5;
   background-color: rgba(255,255,255,1);
 }
-.fixed-nav-bar a{
+
+input.fixed-nav-bar{
 	position: relative;
-	right: 300px;
-	margin-left: 20px;
-	float: right;
-	outline: none;
+	float: left;
+}
+
+.search-field {
+  display: inline-block;
+	width: 100px;
+}
+
+.search-button {
+  display: inline;
+  margin-top: 10px;
+	margin-right: 20px;
+}
+
+input.button.button-search {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.editdelete a{
+	float: left;
+	margin-right: 25px;
 }
 
 #two h2{
@@ -2575,7 +2613,6 @@ section#two{
 		#signout{
 			margin: 7px;
 			vertical-align: top;
-			float: left;
 			background-color: white;
 		}
 
