@@ -1,27 +1,26 @@
 <div class="body">
   <h1><%= @lift.name %></h1>
-      <h2><%= @lift.description %></h2>
+  <h2><%= @lift.description %></h2>
 
-    <div class="callout">
-      Driver: <%= @lift.user.name %><br>
-      Leaving: <%= @lift.departure %><br>
-      To: <%= @lift.destination %><br>
-      Local zip: <%= @lift.zip %><br>
-      Number of open spots: <%= @lift.open_seats %><br>
-      <a href="https://www.facebook.com/messages/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
-      <iframe
-        width="600"
-        height="450"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
-          &q=<%= @lift.zip %>">
-      </iframe>
-    </div>
-    <ul class="editdelete">
-    <% if current_user.id == @lift.user_id %>
-      <a><%= button_to 'Edit', edit_lift_path(@lift), :method => :get %></a>
-      <a><%= button_to 'Delete', lift_path(@lift), method: :delete, data: { confirm: 'Are you sure?' } %></a>
-    <% end %>
-  </ul>
-    </div>
+  <div class="callout">
+    Driver: <%= @lift.user.name %><br>
+    Leaving: <%= @lift.departure %><br>
+    To: <%= @lift.destination %><br>
+    Local zip: <%= @lift.zip %><br>
+    Number of open spots: <%= @lift.open_seats %><br>
+    <a href="https://www.facebook.com/messages/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
+    <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
+      &q=<%= @lift.zip %>">
+  </iframe>
+</div>
+<ul class="editdelete">
+  <% if current_user.id == @lift.user_id %>
+    <a><%= button_to 'Edit', edit_lift_path(@lift), :method => :get %></a>
+    <a><%= button_to 'Delete', lift_path(@lift), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  <% end %>
+</ul>
 </div>

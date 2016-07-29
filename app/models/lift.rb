@@ -1,6 +1,6 @@
 class Lift < ActiveRecord::Base
   include PgSearch
-  
+
   belongs_to :user
   validates :name, presence: true
   validates :user_id, presence: true
