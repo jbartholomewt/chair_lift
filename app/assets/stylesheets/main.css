@@ -1584,7 +1584,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #3D383E !important;
 			text-decoration: none;
 		}
 
@@ -2529,6 +2529,7 @@ section#two{
 			right: 30px;
 		}
 
+
 		.fixed-nav-bar input[type=submit] {
     width: 2em;  height: 3em;
 		font-size: 15px;
@@ -2540,17 +2541,24 @@ section#two{
 			top: 10px;
 		}
 
-		#query{
-			width: 100px;
-			display: inline;
+		.searchform{
+			display: inline-block;
+			vertical-align: top;
 		}
 
-		#annoying{
-			margin: 0px;
+
+
+		#query{
+			margin: 7px;
+			width: 200px;
+			display: inline;
+			height: 44px;
 		}
+
 
 		#annoying form{
 			display: inline;
+			width: 200px;
 		}
 
 		form.button_to{
@@ -2572,27 +2580,23 @@ section#two{
 
 input.fixed-nav-bar{
 	position: relative;
-	float: left;
 }
 
 .search-field {
   display: inline-block;
-	width: 100px;
+	width: 200px;
 }
 
 .search-button {
   display: inline;
-  margin-top: 10px;
-	margin-right: 20px;
+	margin: 7em;
 }
 
 input.button.button-search {
-  margin-top: 0px;
-  margin-bottom: 0px;
+margin: 7px;
 }
 
 .editdelete a{
-	float: left;
 	margin-right: 25px;
 }
 

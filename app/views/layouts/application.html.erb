@@ -15,17 +15,18 @@
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
-				<strong>chair lift.</strong>
+				<strong><%= link_to 'chair lift.', lifts_path%></strong>
 			</header>
 
 			<!--Top Nav--><% if user_signed_in? %>
 			<nav class=" row fixed-nav-bar">
 				<div id="annoying">
+					<div class="searchform">
 					<%= form_tag lifts_path, method: :get do %>
 				      <%= text_field_tag :query %>
 				      <%= submit_tag "Search", { class: "button button-search" } %>
 				  <% end %>
-				<%= button_to 'Home', lifts_path, id: 'homebutton', :method => :get %>
+				</div>
 				<%= button_to 'Add Lift', new_lift_path, id: 'addbutton', :method => :get %>
 				<%= button_to 'Sign Out', destroy_user_session_path, id: 'signout', :method => :delete %>
 				<% if current_user.photo != nil %>
