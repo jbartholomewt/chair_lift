@@ -1,12 +1,12 @@
 
 <section id="three">
   <h2>Create A Lift</h2>
-  <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+  <p>Please fill out the form below.  A user will contact you via facebook to set up a ride!</p>
   <div class="row">
     <div class="8u 12u$(small)">
       <%= form_for(@lift) do |f| %>
         <div class="row uniform 50%">
-          <div class="6u 12u$(xsmall)"><%= f.text_field :name, placeholder: "Name" %></div>
+          <div class="6u 12u$(xsmall)"><%= f.text_field :name, placeholder: "Lift Name" %></div>
           <div class="6u 12u$(xsmall)"><%= f.text_field :open_seats, placeholder: "Open Seats" %></div>
           <div class="6u 12u$(xsmall)"><%= f.text_field :zip, placeholder: "Zip" %></div>
           <div class="6u 12u$(xsmall)"><%= f.text_field :departure, placeholder: "Departure Location" %></div>
@@ -24,9 +24,9 @@
     <div class="4u$ 12u$(small)">
       <ul class="labeled-icons">
         <li>
-          1234 Somewhere Rd.<br />
-          Nashville, TN 00000<br />
-          United States
+          Your lift name and desription
+          can be anything!  Feel free to mention
+          gas estimates and trip details here.
         </li>
       </ul>
     </div>

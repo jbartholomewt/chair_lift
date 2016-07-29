@@ -23,7 +23,7 @@
 				<div id="annoying">
 					<div class="searchform">
 					<%= form_tag lifts_path, method: :get do %>
-				      <%= text_field_tag :query %>
+				      <%= text_field_tag :query, 'Search' %>
 				      <%= submit_tag "Search", { class: "button button-search" } %>
 				  <% end %>
 				</div>
