@@ -12,6 +12,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-rails'
+gem 'pg_search'
 
 group :development, :test do
   gem 'dotenv-rails'
