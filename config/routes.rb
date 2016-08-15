@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     delete 'sign_out', :to => 'devise/sessions#destroy'
     authenticated :user do
+      namespace :api do
+        resources :lifts, only: [:index]
+      end
       resources :lifts
       root 'lifts#index', as: :authenticated_root
     end
