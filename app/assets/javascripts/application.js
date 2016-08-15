@@ -16,3 +16,26 @@
 //= require util
 //= require main
 //= require_tree .
+var marker;
+var map;
+var request;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 40, lng: -70},
+    zoom: 6
+  });
+
+ request = $.ajax({
+     method: "GET",
+     url: "/api/lifts"
+   });
+   request.done(function(data) {
+     data.lifts.forEach(function(lift){
+       marker = new google.maps.Marker({
+        position: lift.zip,
+        map: map,
+        animation: google.maps.Animation.DROP
+     });
+   });
+ })
+}
