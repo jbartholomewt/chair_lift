@@ -3,32 +3,19 @@
   <section id="two">
     <h2>Recent Lifts</h2>
 
-  <% @lifts.each do |lift| %>
-      <article class="6u 12u$(xsmall) work-item">
-        <!-- <a><iframe
-          frameborder="0" style="border:0"
-          width="380"
-          height="224"
-          src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
-            &q=<%= lift.zip %>">
-        </iframe></a> -->
-        <p><%= link_to lift.name, lift_path(lift) %> by: <%= lift.user.name %></p>
-        <p>Leaving: <%= lift.departure %></p> <%= lift.departure_date.strftime("on %m/%d/%Y") %>
-      </article>
-<% end %>
 <div id="map"></div>
-<script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-      });
-    }
-  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_KEY']%>&callback=initMap"
   async defer></script>
   </section>
+
+  <% @lifts.each do |lift| %>
+      <article class="6u 12u$(xsmall) work-item">
+        <p><%= link_to lift.name, lift_path(lift) %></p>
+        <p> by: <%= lift.user.name %> </p>
+        <p>Leaving: <%= lift.departure %></p>
+        <p><%= lift.departure_date.strftime("on %m/%d/%Y") %></p>
+      </article>
+<% end %>
 
 
   <!-- </div>
