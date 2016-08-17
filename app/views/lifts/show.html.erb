@@ -9,13 +9,6 @@
     Local zip: <%= @lift.zip %><br>
     Number of open spots: <%= @lift.open_seats %><br>
     <a href="https://www.facebook.com/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
-    <iframe
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
-      &q=<%= @lift.zip %>">
-  </iframe>
 </div>
 <ul class="editdelete">
   <% if current_user.id == @lift.user_id %>
