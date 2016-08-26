@@ -248,6 +248,8 @@ GEM
     mimemagic (0.3.1)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.11.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -307,6 +309,8 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_bootstrap_sortable (2.0.0)
+      momentjs-rails (~> 2, >= 2.8.3)
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
     railties (4.2.5)
@@ -395,6 +399,7 @@ DEPENDENCIES
   jquery-rails
   koala (~> 2.2)
   launchy
+  momentjs-rails
   omniauth
   omniauth-facebook
   pg (~> 0.15)
@@ -403,6 +408,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.5)
   rails_12factor
+  rails_bootstrap_sortable
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   shoulda-matchers

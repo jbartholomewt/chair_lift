@@ -3,6 +3,7 @@
 *= require_self
 *= require font-awesome
 *= require ie8
+*= require bootstrap-sortable
 *= require main
 *= require_tree .
 */
