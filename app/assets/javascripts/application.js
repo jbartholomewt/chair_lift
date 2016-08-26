@@ -15,7 +15,7 @@ var geocoder;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 41.850033, lng: -94.6500523},
+    center: {lat: 37.850033, lng: -95.6500523},
     zoom: 4
   });
   var oms = new OverlappingMarkerSpiderfier(map, {keepSpiderfied: true});

@@ -1,0 +1,26 @@
+<table class=" table table-striped sortable" data-sort-name="name" data-sort-order="desc">
+<thead>
+  <tr>
+    <th data-field="name" data-sortable="true">Name</th>
+    <th data-field="username" data-sortable="true">Driver</th>
+    <th data-field="departure" data-sortable="true">Departure</th>
+    <th data-field="destination" data-sortable="true">Destination</th>
+    <th data-field="date" data-sortable="true">Departure Date</th>
+
+
+  </tr>
+</thead>
+
+ <tbody>
+   <% @lifts.each do |lift| %>
+    <tr>
+      <td><%= link_to lift.name, lift_path(lift) %></td>
+      <td><%= lift.user.name %></td>
+      <td><%= lift.departure %></td>
+      <td><%= lift.destination %></td>
+      <td><%= lift.departure_date.strftime("on %m/%d/%Y") %></td>
+
+    </tr>
+  <% end %>
+ </tbody>
+</table>
