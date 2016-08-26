@@ -2631,6 +2631,10 @@ margin: 7px;
 			width: 800px;
 		}
 
+		.liftlist{
+			text-align: left;
+		}
+
 		.image.avatar {
 			position: absolute;
     	top: 0px;

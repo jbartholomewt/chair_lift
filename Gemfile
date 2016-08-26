@@ -13,6 +13,8 @@ gem 'omniauth-facebook'
 gem 'koala', '~> 2.2'
 gem 'font-awesome-rails'
 gem 'pg_search'
+gem 'momentjs-rails'
+gem 'rails_bootstrap_sortable'
 
 group :development, :test do
   gem 'dotenv-rails'
