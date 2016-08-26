@@ -2604,6 +2604,10 @@ margin: 7px;
 	text-align: center;
 }
 
+.link_toggle {
+	text-align: center;
+}
+
 .homebutton{
 	width: 0;
 }

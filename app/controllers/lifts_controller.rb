@@ -2,6 +2,7 @@ class LiftsController < ApplicationController
   before_action :authenticate_user!
   def index
     @lifts = Lift.search(params[:query])
+    @partial = params[:view] || "map" || "list"
   end
 
   def create
