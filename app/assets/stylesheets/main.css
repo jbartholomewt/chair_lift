@@ -2631,13 +2631,21 @@ margin: 7px;
 
 		#map{
 			display: inline-block;
-			height: 500px;
+			height: 480px;
 			width: 800px;
 		}
 
 		.liftlist{
 			text-align: left;
 		}
+
+		#showstuff{
+			padding: 10px;
+			border-style: solid;
+			border-width: thick;
+	    border-radius: 10px;
+		}
+
 
 		.image.avatar {
 			position: absolute;
@@ -3122,7 +3130,7 @@ margin: 7px;
 
 			#main {
 				margin: 0;
-				padding: 6em 4em;
+				padding: 0em 2em 0em 2em;
 				width: 100%;
 			}
 
@@ -3185,7 +3193,7 @@ margin: 7px;
 		/* Main */
 
 			#main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
+				padding: .25em 1.5em 0.25em 1.5em;
 			}
 
 				#main > section {
