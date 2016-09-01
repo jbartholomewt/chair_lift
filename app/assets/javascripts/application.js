@@ -44,7 +44,6 @@ function initMap() {
           var contentString = '<div>'+
           '<h1>' + lift.name + '</h1>'+
           '<div>'+
-          '<p> <b>Description: </b>' + lift.description + '</p>'+
           '<p> <b>Departure: </b>' + lift.departure + '</p>'+
           '<p> <b>Destination: </b>' + lift.destination + '</p>'+
           '<p> <b>Departure Date: </b>' + lift.departure_date + '</p>'+

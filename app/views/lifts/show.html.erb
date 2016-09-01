@@ -1,15 +1,15 @@
-<div class="body">
+<div>
   <h1><%= @lift.name %></h1>
-  <h2><%= @lift.description %></h2>
+  <h3><%= @lift.description %></h3>
 
-  <div class="callout">
+  <div id="showstuff">
     Driver: <%= @lift.user.name %><br>
     Leaving: <%= @lift.departure %><br>
     To: <%= @lift.destination %><br>
     Local zip: <%= @lift.zip %><br>
     Number of open spots: <%= @lift.open_seats %><br>
-    <a href="https://www.facebook.com/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
 </div>
+<a href="https://www.facebook.com/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
 <ul class="editdelete">
   <% if current_user.id == @lift.user_id %>
     <a><%= button_to 'Edit', edit_lift_path(@lift), :method => :get %></a>
