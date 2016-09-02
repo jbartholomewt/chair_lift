@@ -63,7 +63,8 @@ var d = new Date(lift.departure_date)  // 30 Jan 2011
           '</div>'+
           '</div>';
           infowindow = new google.maps.InfoWindow({
-            content: contentString
+            content: contentString,
+            panToBounds: true
           });
           oms.addListener('spiderfy', function(marker) {
           });
