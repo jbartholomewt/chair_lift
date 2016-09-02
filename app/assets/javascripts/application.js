@@ -41,7 +41,7 @@ function initMap() {
             map: map,
             animation: google.maps.Animation.DROP
           });
-          var contentString = '<div>'+
+          var contentString = '<div id ="contentstring">'+
           '<h1>' + lift.name + '</h1>'+
           '<div>'+
           '<p> <b>Departure: </b>' + lift.departure + '</p>'+
