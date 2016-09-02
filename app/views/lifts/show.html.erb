@@ -1,4 +1,3 @@
-<div>
   <h1><%= @lift.name %></h1>
   <h3><%= @lift.description %></h3>
 
@@ -10,10 +9,10 @@
     Number of open spots: <%= @lift.open_seats %><br>
 </div>
 <a href="https://www.facebook.com/<%=@user.uid%>" target="_blank">Send this user a facebook message!</a>
-<ul class="editdelete">
+<div class="editdelete">
   <% if current_user.id == @lift.user_id %>
-    <a><%= button_to 'Edit', edit_lift_path(@lift), :method => :get %></a>
-    <a><%= button_to 'Delete', lift_path(@lift), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+    <%= button_to 'Edit', edit_lift_path(@lift), :method => :get %>
+    <%= button_to 'Delete', lift_path(@lift), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </ul>
 </div>
