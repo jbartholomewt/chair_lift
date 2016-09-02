@@ -2652,6 +2652,7 @@ margin: 7px;
 			color: #F3805C;
 			position: relative;
 			float: left;
+			margin-right: 5px;
 		}
 
 		#contentstring h1{
@@ -2659,6 +2660,7 @@ margin: 7px;
 			border-bottom-width: medium;
 			border-bottom-color: #787878;
 		}
+
 
 		#contentstring p{
 			margin: 1px;
