@@ -22,8 +22,9 @@ end
     fill_in 'datefield', :with => '1988/10/10'
     click_button 'Create Lift'
 
-    expect(page).to have_content('Waterville Valley day trip')
     expect(page).to have_content('Lift successfully added!')
+    click_link 'List'
+    expect(page).to have_content('Waterville Valley day trip')
 
   end
 

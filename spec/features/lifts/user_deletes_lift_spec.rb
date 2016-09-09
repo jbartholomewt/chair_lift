@@ -19,6 +19,7 @@ end
     fill_in 'lift[zip]', :with => '02120'
     fill_in 'datefield', :with => '1988/10/10'
     click_button 'Create Lift'
+    click_link 'List'
     click_on "Waterville Valley day trip"
     click_button 'Delete'
 
