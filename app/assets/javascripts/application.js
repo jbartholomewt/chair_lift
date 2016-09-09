@@ -30,16 +30,17 @@ function initMap() {
       var lat = '';
       var lng = '';
       var infowindow;
-function formatDate(d) {
-  var dd = d.getDate()
-  if ( dd < 10 ) dd = '0' + dd
-  var mm = d.getMonth()+1
-  if ( mm < 10 ) mm = '0' + mm
-  var yy = d.getFullYear() % 100
-  if ( yy < 10 ) yy = '0' + yy
-  return dd+' - '+mm+' - '+yy
-}
-var d = new Date(lift.departure_date)  // 30 Jan 2011
+      function formatDate(d) {
+        var dd = d.getDate()
+        if ( dd < 10 ) dd = '0' + dd
+        var mm = d.getMonth()+1
+        if ( mm < 10 ) mm = '0' + mm
+        var yy = d.getFullYear() % 100
+        if ( yy < 10 ) yy = '0' + yy
+        return dd+' - '+mm+' - '+yy
+      }
+
+      var d = new Date(lift.departure_date)  // 30 Jan 2011
 
       // var date1 = lift.departure_date.toString().slice(0,10);
       geocoder = new google.maps.Geocoder();
